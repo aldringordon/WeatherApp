@@ -1,4 +1,67 @@
-<div class="container">
+<div class="container" *ngIf="weatherData">
+  <div class="upper-data">
+    <img src="../assets/Hot.png" *ngIf="weatherData.main.temp > 15">
+    <img src="../assets/Cold.png" *ngIf="weatherData.main.temp <= 15">
+
+    <div class="weather-data">
+      <div class="location">{{weatherData.name}}</div>
+      <div class="temperature">{{ temperature | number: '1.0-0'}}°C</div>
+    </div>
+  </div>
+
+  <div class="lower-data">
+    <div class="more-info-label">
+      More Information
+    </div>
+
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/min.png" alt="">
+          <span>min</span>
+        </div>
+        <div class="info-block-value">
+          {{minTemperature | number: '1.0-0'}}°C
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/max.png" alt="">
+          <span>max</span>
+        </div>
+        <div class="info-block-value">
+          {{maxTemperature | number: '1.0-0'}}°C
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/humidity.png" alt="">
+          <span>humidty</span>
+        </div>
+        <div class="info-block-value">
+          {{humidity}}%
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/wind.png" alt="">
+          <span>wind</span>
+        </div>
+        <div class="info-block-value">
+          {{windSpeed}} km/h
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Saving static code just in case... -->
+<!-- <div class="container">
   <div class="upper-data">
     <img src="../assets/Hot.png" *ngIf="14 > 15">
     <img src="../assets/Cold.png" *ngIf="14 <= 15">
@@ -57,6 +120,6 @@
 
     </div>
   </div>
+</div> -->
 
-
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
