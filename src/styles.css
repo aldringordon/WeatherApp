@@ -1,11 +1,11 @@
 :root {
-    --blue-1: #2800b9;
-    --blue-2: #3258c2;
+    --blue-1: #14112b;
+    --blue-2: #10004b;
     --yellow-1: #ffd700;
     --white-1: #fff;
     --grey-1: #d3d3d3;
     --shadow-dark: rgba(0, 0, 0, 0.2);
-    --shadow-light: rgba(255, 255, 255, 0.1);
+    --shadow-light: rgb(18, 0, 97);
 }
 
 * {
