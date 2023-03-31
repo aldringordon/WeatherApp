@@ -50,3 +50,28 @@ body {
     width: 100%;
     height: 100%;
 }
+
+.weather-data {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--shadow-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.location {
+    color: var(--white-1);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.temperature {
+    color: var(--white-1);
+    font-size: 4em;
+    text-align: center;
+    font-weight: 900;
+}
