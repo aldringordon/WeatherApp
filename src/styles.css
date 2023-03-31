@@ -33,3 +33,20 @@ body {
     border-radius: 20px;
     box-shadow: 10px 10px 10px var(--shadow-dark);
 }
+
+.upper-data {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.upper-data img {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
